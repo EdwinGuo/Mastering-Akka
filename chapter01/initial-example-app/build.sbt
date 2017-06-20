@@ -5,7 +5,7 @@ name := "initial-example-app"
 lazy val commonSettings = Seq(
   organization := "com.packt.masteringakka",
   version := "0.1.0",
-  scalaVersion := "2.11.2"
+  scalaVersion := "2.11.11"
 )
 
 lazy val root = (project in file(".")).
