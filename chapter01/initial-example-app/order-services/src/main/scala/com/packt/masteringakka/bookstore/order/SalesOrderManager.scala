@@ -1,19 +1,25 @@
 package com.packt.masteringakka.bookstore.order
 
 import akka.actor._
+
 import scala.concurrent.ExecutionContext
 import com.packt.masteringakka.bookstore.common._
 import slick.dbio.DBIOAction
+
 import scala.concurrent.Future
 import slick.jdbc.SQLActionBuilder
 import slick.jdbc.GetResult
+
 import concurrent.duration._
 import akka.util.Timeout
 import com.packt.masteringakka.bookstore.domain.user._
 import com.packt.masteringakka.bookstore.domain.book._
 import java.util.Date
+
 import com.packt.masteringakka.bookstore.domain.credit._
-import com.packt.masteringakka.bookstore.domain.credit.CreditCardTransaction
+import com.packt.masteringakka.bookstore.domain.order._
+
+import scala.language.postfixOps
 
 /**
  * Companion to the SalesOrderManager actor
@@ -170,7 +176,6 @@ class SalesOrderManager extends BookStoreActor{
    * Future
    * @param error An error message that will be used to fail the future if it's not a FullResult
    * @param result The result to inspect and try and unwrap
-   * @param A Future for type T
    */
   def unwrapResult[T](error:ErrorMessage)(result:ServiceResult[T]):Future[T] =  result match {    
     case FullResult(user) => Future.successful(user)

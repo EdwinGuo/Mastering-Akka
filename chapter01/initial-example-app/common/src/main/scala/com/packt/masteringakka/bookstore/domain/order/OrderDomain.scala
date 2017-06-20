@@ -1,4 +1,4 @@
-package com.packt.masteringakka.bookstore.order
+package com.packt.masteringakka.bookstore.domain.order
 
 import java.util.Date
 import com.packt.masteringakka.bookstore.domain.credit.CreditCardInfo

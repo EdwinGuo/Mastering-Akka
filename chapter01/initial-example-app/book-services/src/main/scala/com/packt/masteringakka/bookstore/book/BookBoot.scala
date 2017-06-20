@@ -8,7 +8,7 @@ import akka.actor.ActorSystem
  */
 class BookBoot extends Bootstrap{
 
-  def bootup(system:ActorSystem) = {
+  def bootup(system:ActorSystem): List[BookEndpoint] = {
     import system.dispatcher    
     val bookManager = system.actorOf(BookManager.props, BookManager.Name)    
     List(new BookEndpoint(bookManager))

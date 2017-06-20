@@ -7,8 +7,8 @@ import com.typesafe.config.Config
  * Settings extension for credit related settings
  */
 class CreditSettingsImpl(conf:Config) extends Extension{
-  val creditConfig = conf.getConfig("credit")
-  val creditChargeUrl = creditConfig.getString("creditChargeUrl")
+  val creditConfig: Config = conf.getConfig("credit")
+  val creditChargeUrl: String = creditConfig.getString("creditChargeUrl")
 }
 object CreditSettings extends ExtensionId[CreditSettingsImpl] with ExtensionIdProvider { 
   override def lookup = CreditSettings 

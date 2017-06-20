@@ -2,6 +2,7 @@ package com.packt.masteringakka.bookstore.order
 
 import akka.actor.ActorRef
 import com.packt.masteringakka.bookstore.common.BookstorePlan
+import com.packt.masteringakka.bookstore.domain.order._
 import io.netty.channel.ChannelHandler.Sharable
 import unfiltered.request.{Seg, _}
 
