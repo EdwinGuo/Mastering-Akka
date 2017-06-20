@@ -3,24 +3,10 @@
 # Mastering Akka
 This is the code repository for [Mastering Akka](https://www.packtpub.com/application-development/mastering-akka?utm_source=Github&utm_medium=Repository&utm_campaign=9781786465023), published by Packt. It contains all the supporting project files necessary to work through the book from start to finish.
 
-## Instructions and Navigations
-All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, chapter02.
+## Instructions
+All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, `chapter02`. In each folder, you will find at least 1 valid SBT project that you can import using IntelliJ and begin working with. 
 
-
-
-The code will look like the following:
-```
-{
-"firstName": "Chris",
-"lastName": "Baxter",
-"email": "chris@masteringakka.com"
-}
-```
-
-You will need a computer (Windows or Mac OS X) with Java 8 installed on it. You will need
-to have Simple Build Tool (sbt) installed on that computer as well. This book also leverages
-Docker, with the installation of Docker being covered in more detail in Chapter 1, Building
-a Better Reactive App.
+You will need a computer (Windows, Linux or Mac OS X) with Java 8 along with Simple Build Tool ([SBT](http://www.scala-sbt.org)) installed on that computer as well. This book also leverages [Docker](https://docs.docker.com/engine/installation). For Windows based installs, the book references an outdated version of Docker so we highly recommend using [Docker For Windows](https://docs.docker.com/docker-for-windows/install) to get the best experience and to avoid the editing of your `hosts` file.
 
 Software and Hardware List
 
