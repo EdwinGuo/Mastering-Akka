@@ -47,7 +47,7 @@ lazy val server = {
       version in Docker := "latest",
       dockerExposedPorts := Seq(8080),
       maintainer in Docker := "mastering-akka@packt.com",
-      dockerBaseImage := "java:8"
+      dockerBaseImage := "anapsix/alpine-java:latest"
     )
   ).dependsOn(common, bookServices, userServices, creditServices, orderServices)
     .enablePlugins(JavaAppPackaging)
